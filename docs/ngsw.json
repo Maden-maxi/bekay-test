@@ -1,0 +1,81 @@
+{
+  "configVersion": 1,
+  "index": "https://Maden-maxi.github.io/bekay-test/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://Maden-maxi.github.io/bekay-test/4.a983eeeb258ffd0666a9.js",
+        "https://Maden-maxi.github.io/bekay-test/favicon.ico",
+        "https://Maden-maxi.github.io/bekay-test/index.html",
+        "https://Maden-maxi.github.io/bekay-test/main.683ab6f3f1427d41c607.js",
+        "https://Maden-maxi.github.io/bekay-test/polyfills.7037a817a5bb670ed2ca.js",
+        "https://Maden-maxi.github.io/bekay-test/runtime.fc71a26647fa58b21b54.js",
+        "https://Maden-maxi.github.io/bekay-test/styles.7aa589602b73cb6378fc.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://Maden-maxi.github.io/bekay-test/assets/icons/icon-128x128.png",
+        "https://Maden-maxi.github.io/bekay-test/assets/icons/icon-144x144.png",
+        "https://Maden-maxi.github.io/bekay-test/assets/icons/icon-152x152.png",
+        "https://Maden-maxi.github.io/bekay-test/assets/icons/icon-192x192.png",
+        "https://Maden-maxi.github.io/bekay-test/assets/icons/icon-384x384.png",
+        "https://Maden-maxi.github.io/bekay-test/assets/icons/icon-512x512.png",
+        "https://Maden-maxi.github.io/bekay-test/assets/icons/icon-72x72.png",
+        "https://Maden-maxi.github.io/bekay-test/assets/icons/icon-96x96.png",
+        "https://Maden-maxi.github.io/bekay-test/assets/mock-data/users.json",
+        "https://Maden-maxi.github.io/bekay-test/assets/scss/_animation.scss",
+        "https://Maden-maxi.github.io/bekay-test/assets/scss/_bs-overrides.scss",
+        "https://Maden-maxi.github.io/bekay-test/assets/scss/_variables.scss"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://Maden-maxi.github.io/bekay-test/4.a983eeeb258ffd0666a9.js": "5036da3317964208916ce1afc0c0f144e1d23b01",
+    "https://Maden-maxi.github.io/bekay-test/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "https://Maden-maxi.github.io/bekay-test/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "https://Maden-maxi.github.io/bekay-test/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "https://Maden-maxi.github.io/bekay-test/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "https://Maden-maxi.github.io/bekay-test/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://Maden-maxi.github.io/bekay-test/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://Maden-maxi.github.io/bekay-test/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "https://Maden-maxi.github.io/bekay-test/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://Maden-maxi.github.io/bekay-test/assets/mock-data/users.json": "86df5ddbdad83b9e723519bf997430a72512a9d8",
+    "https://Maden-maxi.github.io/bekay-test/assets/scss/_animation.scss": "702f9700fe3616a450568099b5cfa287e9e115e5",
+    "https://Maden-maxi.github.io/bekay-test/assets/scss/_bs-overrides.scss": "8df4e0b339e8f0ee0a45eec40eb832d6b0c64831",
+    "https://Maden-maxi.github.io/bekay-test/assets/scss/_variables.scss": "5fc55565c75339f0dcd471b4a9c4409d772fd59f",
+    "https://Maden-maxi.github.io/bekay-test/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "https://Maden-maxi.github.io/bekay-test/index.html": "e7568a58355338550dcec563fcd0cf008365e56d",
+    "https://Maden-maxi.github.io/bekay-test/main.683ab6f3f1427d41c607.js": "bb4490a066fcda00b5a199cb6636140715a4ce6b",
+    "https://Maden-maxi.github.io/bekay-test/polyfills.7037a817a5bb670ed2ca.js": "6946e10a03311677a01490b8e91741668e64e17e",
+    "https://Maden-maxi.github.io/bekay-test/runtime.fc71a26647fa58b21b54.js": "29cc136f6465088770794586d3447ddfe9425f3f",
+    "https://Maden-maxi.github.io/bekay-test/styles.7aa589602b73cb6378fc.css": "b4dbaaf17578b4e8786ab4c5340375adf558228f"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}

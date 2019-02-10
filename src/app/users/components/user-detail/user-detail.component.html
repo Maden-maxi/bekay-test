@@ -1,0 +1,97 @@
+<div *ngIf="user$ | async as user" class="bg-dark">
+  <form [formGroup]="form" [appFormConnector]="user" (ngSubmit)="save()">
+    <table class="table table-striped table-dark">
+      <tr>
+        <th>Picture</th>
+        <th>ID</th>
+        <td>GUID</td>
+        <th>Email</th>
+        <th>Registered</th>
+      </tr>
+      <tr>
+        <td><img *ngIf="form.value.picture" [src]="form.value.picture" class="img-fluid" style="max-width: 100px"></td>
+        <td>{{user._id}}</td>
+        <td>{{user.guid}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.registered | date:'MM-dd-yyyy HH:mm'}}</td>
+      </tr>
+    </table>
+
+    <div class="p-3">
+      <div class="form-group">
+        <label for="picture" class="btn btn-primary mt-3">Change picture <i class="fas fa-upload"></i></label>
+        <input type="file" hidden id="picture" accept="image/jpeg,image/png" placeholder="Choose Image" (change)="changePicture($event)">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-user-alt"></i></span>
+        </div>
+        <input formControlName="name" class="form-control" [class.is-invalid]="form.get('name').touched && form.get('name').invalid" placeholder="Full name">
+        <div class="invalid-feedback">
+          This is required.
+        </div>
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-phone"></i></span>
+        </div>
+        <input type="tel" formControlName="phone" [textMask]="phoneMask" class="form-control" placeholder="Phone number">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-dollar-sign"></i></span>
+        </div>
+        <input formControlName="balance" [textMask]="moneyMask" class="form-control" placeholder="Balance">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+        </div>
+        <input type="number" formControlName="age" class="form-control" placeholder="Age">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-building"></i></span>
+        </div>
+        <input class="form-control" formControlName="company" placeholder="Company">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-user-tag"></i></span>
+        </div>
+        <textarea class="form-control" formControlName="about" placeholder="About"></textarea>
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-location-arrow"></i></span>
+        </div>
+        <textarea class="form-control" formControlName="address" placeholder="Address"></textarea>
+      </div>
+      <div class="form-group">
+        <label class="text-white" for="eyeColor">Eye color: <i class="fas fa-palette"></i> </label>
+        <br>
+        <input id="eyeColor" class="btn border-white" style="width: 38px;" [style.background]="form.value.eyeColor" [(colorPicker)]="eyeColor" (colorPickerClose)="eyeColorChange($event)" (cpInputChange)="eyeColorChange($event)" readonly>
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-tags"></i></span>
+        </div>
+        <ng-select formControlName="tags" [multiple]="true" [addTag]="true"></ng-select>
+      </div>
+
+      <h3 class="text-white">Right click on the map to change marker location</h3>
+
+      <agm-map style="width: 100%; height: 300px" [latitude]="user.latitude" [longitude]="user.longitude" (mapRightClick)="changeLocation($event)">
+        <agm-marker [latitude]="form.value.latitude" [longitude]="form.value.longitude"></agm-marker>
+      </agm-map>
+
+      <div class="mt-3">
+        <button class="btn btn-success mr-3">Update</button> <a class="btn btn-secondary" [routerLink]="['/']">Back</a>
+      </div>
+    </div>
+
+
+  </form>
+
+</div>

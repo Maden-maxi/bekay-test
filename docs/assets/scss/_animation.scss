@@ -1,0 +1,21 @@
+/* route animation */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@-moz-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+router-outlet ~ * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.route-fadeIn + * {
+  animation: fadeIn 0.3s;
+}
